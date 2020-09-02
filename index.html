@@ -21,18 +21,6 @@
   </head>
   <body>
     <h1>Data Science for Everyone</h1>
-    <script language="javaScript">
-    function autoResize(){
-        $('#themeframe').height($('#themeframe').contents().height());
-    }
-    function resize()
-    {
-        window.parent.autoResize();
-    }
-    $(window).on('resize', resize);
-    </script>
-
-    <iframe src="Data Science for Everyone.pdf" id="iFrame1"></iframe>
-    <iframe src="Data Science for Everyone.pdf"></iframe>
+    <iframe src="Data Science for Everyone.pdf" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:600px;width:100%;border:none;overflow:hidden;"></iframe>
   </body>
 </html>
