@@ -21,15 +21,15 @@
   </head>
   <body>
     <h1>Data Science for Everyone</h1>
-    <script type="application/javascript">
-    function resizeIFrameToFitContent( iFrame ) {
-        iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
-        iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+    <script language="javaScript">
+    function autoResize(){
+        $('#themeframe').height($('#themeframe').contents().height());
     }
-    window.addEventListener('DOMContentLoaded', function(e) {
-        var iFrame = document.getElementById( 'iFrame1' );
-        resizeIFrameToFitContent( iFrame );
-    } );
+    function resize()
+    {
+        window.parent.autoResize();
+    }
+    $(window).on('resize', resize);
     </script>
 
     <iframe src="Data Science for Everyone.pdf" id="iFrame1"></iframe>
